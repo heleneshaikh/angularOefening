@@ -1,0 +1,22 @@
+<div>
+  <form class="form" novalidate name="searchMovies" ng-submit="searchController.searchMovie(title)" >
+    <input type="text" ng-model="title" class="form-control" placeholder="enter title">
+    <button type="submit" class="btn btn-primary btn-block">Search</button>
+  </form>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>poster</th>
+        <th>title</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="select in searchController.movieSelected">
+        <td><img src="{{ select.poster }}"</td>
+        <td>{{ select.title  | uppercase }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+</div>

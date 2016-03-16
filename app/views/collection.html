@@ -1,0 +1,16 @@
+<button class="btn" ng-click="movieController.hideAll()">Hide movies</button>
+
+<table class="table" ng-hide="movieController.hide">
+  <thead>
+    <tr>
+      <th>poster</th>
+      <th>title</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="movie in movieController.movies">
+      <td><img src="{{ movie.poster }}"</td>
+      <td>{{ movie.title  | uppercase }}</td>
+    </tr>
+  </tbody>
+</table>
